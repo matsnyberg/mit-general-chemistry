@@ -1,0 +1,741 @@
+\documentclass[../mit-general-chemistry.tex]{subfiles}
+\begin{document}
+
+
+\chapter{Spontaneous change and free energy}
+
+
+
+A {\em spontaneous reaction} proceeds in the forward direction without
+the need for outside intervention. It is {\em exorgonic}. A reaction
+that does not do that is called {\em non-spontaneous} or {\em
+  endorgonic}.
+
+An example of a spontaneous reaction is the formation of rust
+\ceeqstar{4Fe(s) + 3O2(g) -> 2Fe2O3(s)} with $\enthalpy^0 =
+-824~\kjpm$, an exothermic reaction.
+
+
+The autoionization of water \ceeqstar{H3O+(aq) + OH-(aq) -> 2H2O} is
+also a sponatneous reaction. It has $\enthalpy^0 = -55.9~\kjpm$ and is
+thus also an exothermic reaction.
+
+Another reaction, extremly important in bio sciences, is the ATP
+hydrolysis \ceeqstar{ATP^4-(aq) + 2H2O -> ADP^3-(aq) + HPO4^2-(aq) +
+  H3O+} which drives large numbers of reactions in the cells. The
+reaction has an $\enthalpy^0 = \SI{-24}{\kilo\joule\per\mol}$.
+
+There are tons of exothermic reactions (with $\enthalpy < 0$) that are
+spontaneous and it is easy to draw the conclusion that this is the
+criterion for spontaneity, but that is not the case. Reactions can be
+spontaneous without being exothermic. The following reactions, for
+instance, are endothermic but also sponatneous.
+
+The melting of ice, \ce{H2O (s) -> H2O(l)}, has $\enthalpy^0 =
++6.95~\kjpm$ and is endothermic.
+
+So is \ceeqstar{NH4NO3(s) -> NH4+(aq) + NO3-(aq)} with $\enthalpy^0 =
+\SI{+28}{\kilo\joule\per\mol}$.
+
+So we see that enthalpy is not the key to spontaneity. Instead,
+spontaneity depends on Gibb's free energy, \gibbs.
+
+
+
+
+
+\section{Gibb's free energy}
+
+
+
+We define Gibb's free energy as
+\begin{equation}\label{eq:gibbs}
+  \gibbs = \enthalpy - T \Delta S
+\end{equation}
+where $T$ is the temperature and $\Delta S$ is the change in entropy,
+so it is clear why \enthalpy is closely related to \gibbs. The
+equation is true for constant temperature and pressure.
+
+The relationship to spontaneity is
+
+\begin{center}
+  \begin{tabular}{ll}
+    $\gibbs < 0$ & reaction is spontaneous \\
+    $\gibbs > 0$ & reaction is not spontaneous \\
+    $\gibbs = 0$ & reaction has reached equilibrium  \\
+  \end{tabular}
+\end{center}
+
+
+A negative change in energy, it is just like with enthalpy, means that
+energy is released as the reaction progresses. That is going to be a
+spontaneous reaction.
+
+
+So how come we need Gibb's free energy and that enthalpy is not enough
+to predict spontaneity? If we rewrite Equation~\ref{eq:gibbs} into
+\begin{equation*}
+  \enthalpy = \gibbs + T \Delta S
+\end{equation*}
+
+We see that the energy of a reaction, the enthalpy ($H$), consists of
+a term that is the free energy (\gibbs), useful for work, and an
+amount of energy that gets ``stuck'' in the system. That energy that
+gets ``stuck'' is the $T \Delta S$ term.
+
+
+
+
+\subsection{Entropy}
+
+
+Entropy, $S$, is an amount of the disorder of a system. We write
+$\Delta S$ for the change in entropy. Entropy is a state function.
+
+If $\Delta S > 0$ we are {\em increasing the disorder} of a system
+(decreasing the order).
+
+For the phases, or states, of matter the entropy is greater for
+gaseous matter than it is for liquid matter and solid matter have the
+least entropy. We express this (somewhat loosely) as
+\begin{equation*}
+  \Delta S_g > \Delta S_l > \Delta S_s
+\end{equation*}
+for the different phases gaseous, liquid and solid.
+
+
+Entropy for reactions, $\Delta S_r^0$, can be calculated from the
+absolute entropy of the reactants and products in the same way as for
+enthalpy.
+\begin{equation*}
+  \Delta S_r^0 = \sum~S^0_{\text{products}} - \sum~S^0_{\text{reactants}}
+\end{equation*}
+where $S^0$ is {\em absolute standard entropy}. Since $S = 0$ for the
+perfect crystal at $T = \SI{0}{\kelvin}$, we can consider the
+existence of the notion of an absolute measure of entropy.
+
+
+
+\begin{remark}
+  Note that measures of entropy tends to be much smaller than measures
+  of enthalpy and other measures of energy. It is therefore common
+  that they are given in joules instead of kilo joules and need to be
+  converted into kilo joules when they are used in formulas. 
+\end{remark}
+
+
+
+
+
+\subsubsection{Entropy and probability}
+
+
+
+Entropy is more than disorder. It is, in fact, a clearly defined,
+statistical measure of the arrangement of elements and their
+likelihoods of occurrence.
+
+In thermodynamics more likely (probable) states will predominate over
+time (higher $S$). This is a consequence of the second law of
+thermodynamics that states that the total entropy of an isolated
+system never decreases over time. As time goes, entropy will increase
+or remain the same.
+
+The second law of thermodynamics has two paragraphs. It states that
+entropy of an isolated system never decreases. For reversible
+processes it may be constant, but for irreversible processes it will
+increase. It also states that the total entropy of any system and of
+it's surroundings will always increase.
+
+
+This does not follow directly from the basic laws of physics, instead
+it is a matter of probability and statistics. As there are many more
+states with higher levels of entropy than there are with lower levels,
+systems tend toward disorder if it changes state independently over
+time. Then the changes of state will be a matter of probability where
+there are more high-entropy states then there are low-entropy states,
+which makes the high-entropy states more likely.
+
+
+As an example of the second law of thermodynamics we intuitively know
+that if we pump in gas in a container, the gas particles will
+initially be close to the entry point. Over time the particles will
+spread out all over the container. It is highly unlikely that the
+particles will cluster back at the entry point again.
+
+
+There are many more ways (arrangements) for the particles to be spread
+out than there are to be ordered.
+
+
+
+We are going to consider six coins as a small model. We define states
+of the model as the number of heads that
+show up. We have the sample space $\mathscr{S} = \{1H, 2H, 3H, 4H, 5H,
+6H\}$ for $1H$ meaning a state where all coins but one is showing
+``tails'', $2H$ all but two and so on. The number of arrangements in
+each state is called the {\em likelihood} of that state and is denoted
+by $W$.
+
+We are going to consider the $1H$ (``concentrated'') state and the
+$3H$ (``more spread out'') state. We realize that there are six
+arrangements in the $1H$ state since there are six coins that can be
+the one that is showing ``heads''. We can enumerate the arrangements
+of the $1H$ state by simply flipping one coin at a time.
+
+\begin{htable}\label{tbl:coins:states}
+
+  \hspace*{\fill}
+  \begin{tabular}{ll}
+    HTTTTT & THTTTT \\
+    TTHTTT & TTTHTT \\
+    TTTTHT & TTTTTH \\
+  \end{tabular}
+  \hspace*{\fill}
+
+  \vspace{2em}
+  
+  \hspace*{\fill}
+  \begin{tabular}{llll}
+    HHHTTT & HHTHTT & HHTTHT & HHTTTH \\
+    HTHHTT & HTHTHT & HTHTTH & HTTHHT \\
+    HTTHTH & HTTTHH & THHHTT & THHTHT \\
+    THHTTH & THTHHT & THTHTH & THTTHH \\
+    TTHHHT & TTHHTH & TTHTHH & TTTHHH \\
+  \end{tabular}
+  \hspace*{\fill}
+  
+  \caption{ An enumeration of the arrangements of the $1H$ state and
+    of the $3H$ state. The conclusion is that there are so much higher
+    numbers of arrangements in the $3H$ state than there are in the
+    $1H$ state.}
+\end{htable}
+
+
+The $3H$ state, on the other hand, is the state with the most number
+of arrangements. There are $\binom{6}{3} = 20$ arrangements where
+there are three ``heads'' and three ``tails''.
+
+We can see the arrangements of the two states in
+Table~\ref{tbl:coins:states} which illustrates the point that there
+are quite a few more arrangements in the $3H$ state than there are in
+the $1H$ state. If we would just toss the six coins $3H$ would be the
+most common result. In the language of thermodynamics and entropy we
+could say that the $3H$ state will dominate over time.
+
+
+
+Calling the number of arrangements in each state (6 and 20 in our
+example) the {\em likelihood} of that state is a term coined by
+Boltzmann.
+
+
+Boltzmann's great insight was that entropy is related to $W$.
+\begin{equation*}
+  S = k_B \ln W
+\end{equation*}
+for Boltzmann's constant $k_B$, the gas constant over Avogadro's number
+\begin{equation*}
+  k_B = \frac{R_0}{N_A} = 1.38064852(79)\times 10^{−23} \si{\joule\per\kelvin}
+\end{equation*}
+
+We can use this formula to to calculate the entropy for the coin
+tossing states $1H$ and $3H$.
+\begin{align*}
+  S_1 &= k_B \ln 6 = 2.47 \times 10^{-23} \\
+  S_3 &= k_B \ln 20 = 4.14 \times 10^{-23} \\
+  S_3 &> S_1 \\
+\end{align*}
+Note that the entropy does not depend directly on the total number of
+arrangements like probability do.
+
+We can calculate the entropy change ($\Delta S$) out of ``going from
+one state to another'' and find that $\Delta S_{3\to 1} = S_3 - S_1 >
+0$ and conversely $\Delta S_{1\to 3} = S_1 - S_3 < 0$, that there is
+an increase in entropy as we go from he $1H$ state to the $3H$ state,
+
+If we would repeat the coin tossing over an over again, we would find
+that the $3H$ outcomes would start to spontaneously overwhelm the $1H$
+outcomes.
+
+Going from $1H$ to $3H$ is thus spontaneous as we saw above that
+$\Delta S = S_1 - S_3 < 0$, this corresponds to predictions of
+thermodynamics.
+
+
+
+
+Let's move to a chemical example, carbonyl sulfide,
+\chemfig{O=[,0.7]C=[,0.7]S}. This is a linear molecule with a carbon
+atom in the middle bound to one oxygen atom and one sulfur atom in
+each direction. At very low temperatures carbonyl sulfide form
+crystals where the molecules are lined up, in parallel, next to each
+other. In this arrangement, the sulfur atoms point one way or the
+other. Let's call sulfur atoms pointing one way ``heads'' and the
+other ``tails'' to see the resemblance to our coin tossing example. If
+we study one ``line'' of parallel molecules it could be illustrated
+such as in the figure below.
+
+
+\begin{center}
+  \begin{tikzpicture}[node distance=.2cm]
+    \def\heads{\chemfig{C(=[:90]S)(=[:270]O)}}
+    \def\tails{\chemfig{C(=[:90]O)(=[:270]S)}}
+    \node (a) {\heads};
+    \node[right=of a] (b) {\heads};
+    \node[right=of b] (c) {\tails};
+    \node[right=of c] (d) {\tails};
+    \node[right=of d] (e) {\heads};
+    \node[right=of e] (f) {\tails};
+    \node[right=of f] (g) {$\cdots$};
+    \node[left=of a] {$\cdots$};
+
+    \node[above=1mm of a]{\textbf{H}};
+    \node[above=1mm of b]{\textbf{H}};
+    \node[above=1mm of c]{\textbf{T}};
+    \node[above=1mm of d]{\textbf{T}};
+    \node[above=1mm of e]{\textbf{H}};
+    \node[above=1mm of f]{\textbf{T}};
+  \end{tikzpicture}
+\end{center}
+
+
+In the diagram, the molecules we consider ``heads'' are denoted with
+the letter H. The molecules we consider ``tails'' are denoted with the
+letter T.
+
+We are now going to consider a mole ($N_A = \num{6.022d23}$) of
+molecules instead of six. We will consider the (unique) arrangement of
+a perfect crystal with all sulfur atoms ``pointing'' in one direction
+and call this heads. This is also a state associated with a single
+arrangement, thus $W_{\text{perfect}} = 1$. We will compare this with
+a ``random'' one where we don't know the configuration of the
+atoms. In this state we have $\binom{N_A}{n}$ arrangements in each
+state of $n$ heads. It is obvious that these are {\em huge} numbers.
+
+We can tell that $S_{\text{perfect}} = 0$ since there is one unique
+configuration where all the molecules point in one specific
+direction.
+
+Next consider the configuration that differs from the perfect crystal
+in that one single molecule have been flipped. That is still pretty
+ordered but already in that minor deviation (with $W = N_A$) we get $S
+= k_B \ln N_A = \num{7.56d-22}$. The ``next'' state ``$2H$'' yields $W
+= N_A(N_A - 1) = \num{1.51d-21}$, already ten times higher. The
+expansion of $W_n$ ($n$ being the number of ``heads'') is in fact a
+binomial expansion over $N_A$. If we are familiar with the {\em
+  binomial theorem}, or willing to acquaint ourselves with it, it is
+easy to see the astronomical numbers that will face us going
+further.
+
+
+
+It is however easy to see that the chances of ever reach other than
+fairly random (high entropy) states are disappearingly small, instead,
+probability leans toward a situation where will jump back and forth
+between the states with the highest likelihood (entropy) as is
+predicted by the second law of thermodynamics.
+
+
+
+Now, imagine if we start flipping molecules, one at a time, randomly,
+as we simulate the back and forth among chemical species in real
+life. We will start see entropy increase as we flip molecules. The
+only time entropy will decrease is if we happen to flip a ``tails''
+back to ``heads''. To end up with another perfect arrangement we would
+have to succeed in constantly picking ``tails'' as their numbers grow
+smaller and smaller. Every time we would flip a ``heads'' back to
+``tails'' entropy would increase again, if only by a miniscule
+amount.
+
+Probability theory tells us that we almost certainly never wil
+end upp with the (or any of the two) perfect configurations, instead
+we're probably changing back and forth among those most probable
+configurations, those with the highest entropy. So, we are
+spontaneously ending up in states with greater entropy, solely as a
+matter of probability, without thermodynamics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Calculating the free energy}
+
+
+For example, if we want to calculate $\gibbs^0_r$ for the reaction
+when hydro peroxide turns to water and oxygen gas,
+
+\ceeqstar{2H2O2(l) -> 2H2O(l) + O2(g)}
+we calculate
+\ceeqstar{\Delta S^0_r = [2 S^0(H2O) + S^0(O2)] - 2 S^0(H2O)}
+
+We can look up these values in tables and find that
+
+\begin{center}
+  \begin{tabular}{ll}
+    \toprule
+    Species & $S^0$ \\
+    & {\footnotesize\si{\joule\per\kelvin\per\mol}} \\
+    \midrule
+    \ce{H2O} & 70 \\
+    \ce{O2} & 205 \\
+    \ce{H2O2} & 110 \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+We can use these figures to calculate entropy for the reaction as
+$\Delta S^0_r = 2 \times 70 + 205 - 2 \times
+110~\si{\joule\per\kelvin\per\mol} =
+125~\si{\joule\per\kelvin\per\mol}$.
+
+We notice that \dS\ is positive. This can be explained from the fact
+that the reactant is a liquid whereas the products are liquid and a
+gas and we learned earlier that gasses bring more entropy than do
+liquids.
+
+To predict whether this reaction is spontaneous or not we need to
+calculate \gibbs for the reaction. We now know that $\Delta S^0_r =
+125~\si{\joule\per\kelvin\per\mol}$ and from the lecture we get that
+$\enthalpy^0 = -196~\kjpm$ so
+
+\begin{equation*}
+  \gibbs^0 = \SI{-196}{\kilo\joule\per\mol}
+  - \SI{298.15}{\kelvin}
+  \cdot \SI{0.125}{\kilo\joule\per\kelvin\per\mol}
+  = \SI{-233}{\kilo\joule\per\mol}
+\end{equation*}
+
+Since $\gibbs^0 < 0$ we predict that the reaction occurs
+spontaneously.
+
+Note that the amount of the Gibb's free energy does not tell us
+anything about the time frame (speed) of a reaction. If $\gibbs = -2$
+or $\gibbs = -2000$ does not tell us more than that it is
+spontaneous. Thermodynamics does not answer questions about this. The
+field of kinetics, however, do, as we will see later.
+
+Now consider melting of ice at room temperature.
+\ceeqstar{H2O(s) -> H2O(l)}
+
+We calculate the entropy
+\ceeqstar{\dS^0_r = S^0(H2O(l)) - S^0(H2O(l)) = 69.91 - 41.32
+  = \SI{28.59}{\joule\per\kelvin\per\mol}}
+\dS\ is positive since the reaction is turning a solid into a liquid.
+
+Now we can calculate the free energy
+\begin{align*}
+  \gibbs_r^0 &= 6.95~\kjpm
+  - \SI{298.15}{\kelvin}
+  \cdot \SI{2.859d-2}{\kilo\joule\per\kelvin\per\mol} \\
+  &= \SI{-1.57}{\kilo\joule\per\mol}\\
+\end{align*}
+
+The result tells us that the reaction is spontaneous (at $T =
+\SI{198.15}{\kelvin}$). A lot of people know from everyday experience
+that this reaction is temperature dependent. We also see that the
+reaction is spontaneous even though the enthalpy is positive.
+
+
+
+
+\subsection{Free energy of formation}
+
+
+We can also calculate the {\em free energy of formation}, $\gibbs_f$,
+in a similar way as that of enthalpy of formation.
+
+The standard Gibb's free energy of formation, $\gibbs^0_f$, is defined
+by $\gibbs^0_f = \gibbs^0_r$ for formation of one mole of compound
+from it's elements in their purest states, under standard conditions
+($P = \SI{1}{\bar}, T = \SI{298.15}{\kelvin}$).
+
+These values are tabulated, as was the enthalpy of formation, but the
+standard Gibb's free energy of formation can also be calculated
+through
+\begin{equation*}
+  \gibbs^0_f = \enthalpy^0_f - T \dS^0
+\end{equation*}
+
+
+\standardgibbsfreeenergyof is important because it
+is a measure of a compunds stability relative to that of it's
+elements.
+
+If $\standardgibbsfreeenergyof < 0$ then the compound is
+(thermodynamically) stable to it's elements. If we consider how we
+started to reason about Gibb's free energy, we learned that a reaction
+was going to be spontaneous if $\gibbs_r < 0$. From this we can draw
+the conclusion that the elements will spontaneously form the
+compound.
+
+Conversely, if $\standardgibbsfreeenergyof > 0$, the compound is
+thermodynamically unstable relative to it's elements.
+
+
+
+Consider the free energy of formation for benzene.
+
+\ceeq{6C(gr) + 3H2(g) -> C6H6(l)}
+
+The free energy for formation for benzene is
+$\standardgibbsfreeenergyof = \SI{124}{\kilo\joule\per\mol}$ so
+benzene is unstable relative to it's compounds.
+
+This means that the reverse reaction where we have decomposition of
+benzene is going to be stable.
+
+\ceeq{C6H6(l) -> 6C(gr) + 3H2(g)}
+
+med $\standardgibbsfreeenergyof =
+\SI{-124}{\kilo\joule\per\mol}$. Note that \standardgibbsfreeenergyof
+has the same absolute value but the reverse sign, as it goes in the
+other direction. Remember that Gibb's free energy is a state function
+so differences between compounds and elements are the same, the
+direction is given by the sign od the distance.
+
+Benzene do however exist, so does that mean that the theory is wrong?
+No, benzene do decompose but the reaction is very, very slow.
+
+As we said before: Gibb's free energy of a reaction tells us whether
+it will happen spontaneously or not. Gibb's free energy tells us
+{\em nothing about the rate of that reaction}.
+
+
+
+
+
+
+So we have two ways of calculating \gibbs for a reaction.
+
+We can look up and suum up the $\gibbs_f$ for reactants and products,
+respectively, and $\gibbs_r$ is then the differences between those
+the sums
+\begin{equation*}
+  \gibbs^0_r = \sum\gibbs^0_f(\text{products}) - \sum\gibbs^0_f(\text{reactants})
+\end{equation*}
+
+
+The other way is to calculate it from
+\begin{equation*}
+  \gibbs^0_r = \enthalpy^0_r - T\dS
+\end{equation*}
+
+This last equation can be usefull when temperature is important. Let
+us consider the decomposition of sodium bicarbonate (baking soda).
+
+\ceeq{2NaHCO3(s) -> Na2CO3(s) + CO2(g) + H2O(g)}
+
+We can look up the enthalpy for the reaction and doing so we find that
+$\enthalpy_r^0 = \SI{+135.6}{\kilo\joule\per\mol}$ which tells us that
+this is an endothermic reaction, it requires heat to occur. We also
+can conclude that entropy is increasing ($\dS > 0$) since the left
+hand side consists of one solid compound and there are two gasses
+among the products, so entropy is increasing through the reaction. The
+actual value is indeed positive, $\dS =
+\SI{+0.334}{\kilo\joule\per\kelvin\per\mol}$. From this we can
+calculate
+\begin{equation*}\tag{a}
+  \gibbs^0 = \enthalpy^0 - T \dS^0
+  = \SI{+135.6}{\kilo\joule\per\mol}
+  - T\cdot \SI{+0.334}{\kilo\joule\per\kelvin\per\mol}
+\end{equation*}
+
+
+
+Assuming that \dS\ and \enthalpy\ are independent of $T$,
+$\gibbs^0$ is a linear function of $T$.
+
+At room temperature $\gibbs^0 = \SI{36.1}{\kilo\joule\per\mol}$ so the
+reaction will not occur spontaneously under those conditions. From the
+equation we can see that
+\begin{equation*}
+  T > \frac{\SI{+135.6}{\kilo\joule\per\mol}}{\SI{+0.334}{\kilo\joule\per\kelvin\per\mol}} = 
+  \SI{406}{\kelvin}
+  \implies
+  \gibbs^0_r < 0
+\end{equation*}
+
+So at temperatures above \SI{406}{\kelvin} (\SI{133}{\celsius}) the
+baking soda will start to decompose and release the gasses, for
+instance inside some baked goods in an oven.
+
+
+
+
+\begin{hfigure}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          title={\gibbs when \enthalpy and \dS\ are positive},
+          axis lines=middle,
+          width=.67\textwidth,
+          height=5cm,
+          axis lines = middle,
+          domain=0:600,
+          ymin=-100,
+          ymax=200,
+          xmin = -50,
+          xmax=750,
+          %xtick=\empty,
+          ytick={0, 100},
+          xlabel=$T~(\si{\kelvin})$,
+          ylabel=$\gibbs^0 (\kjpm)$,
+          clip = false
+        ]
+        \addplot[blue, samples=100]{135.6 - 0.334*x};
+        \draw[red,thin] (406, 10) -- (406, -50) node[at end,below,black]{$T^*$};
+        \draw[red,thin] (-10, 135.6) -- (10, 135.6) node[at start,left,black]{$\enthalpy^0$};
+      \end{axis}
+    \end{tikzpicture}%
+  \end{center}
+  \caption{The spontaneity of the decomposition of baking soda and
+    subsequent release of vapor and carbon dioxide is temperature
+    dependent.}
+\end{hfigure}
+
+
+We can notice that whenever the enthalpy and the entropy of a reaction
+have the same sign, we can control spontaneity of the reaction by
+controlling the temperature.
+
+In that situation we can find a $T^*$ for which $\gibbs^0 = 0$ and
+then the reaction will be non-spontaneous ($\gibbs^0 > 0$) for all $T
+< T^*$ and the reaction will be spontaneous ($\gibbs^0 < 0$) for all
+$T > T^*$. In our example $T^* = \SI{406}{\kelvin}$.
+
+We find $T^*$ by solving $\gibbs^0 = \enthalpy^0 - T \dS^0$ for
+$\gibbs^0 = 0$ which give us
+\begin{align*}
+  \enthalpy^0 - T^* \dS^0 &= 0 \\
+  T^* &= \frac{\enthalpy^0}{\dS^0} \\  
+\end{align*}
+just as we did previously.
+
+
+
+When both enthalpy and entropy are negative, we get a reversed
+situation.
+
+
+\begin{hfigure}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          title={\gibbs when \enthalpy and \dS\ are negative},
+          axis lines=middle,
+          width=.67\textwidth,
+          height=5cm,
+          axis lines = middle,
+          domain=0:600,
+          ymax=150,
+          ymin=-200,
+          xmin=-50,
+          xmax=750,
+          %xtick=\empty,
+          ytick={0, 100},
+          xlabel=$T~(\si{\kelvin})$,
+          ylabel=$\gibbs^0 (\kjpm)$,
+          clip = false
+        ]
+        \addplot[blue, samples=100]{-135.6 + 0.334*x};
+        \draw[red,thin] (406, 10) -- (406, -50) node[at end,below,black]{$T^*$};
+        \draw[red,thin] (-10, -135.6) -- (10, -135.6) node[at start,left,black]{$\enthalpy^0$};
+      \end{axis}
+    \end{tikzpicture}%
+  \end{center}
+  
+  \caption{The function $\gibbs = \enthalpy - T \dS$ for a negative
+    \dS and negative \enthalpy. When \dS is negative, the straight
+    line gets an upward slope and, for a negative \enthalpy, becomes
+    spontaneous for lower temperatures, but non-spontaneous for
+    temperatures above $T^*$.}
+\end{hfigure}
+
+Now the reaction is spontaneous for $T < T^*$, as $\gibbs < 0$ and for
+$T > T^*$ the products are now less stable relative to their elements,
+$\gibbs > 0$, and the reaction is no longer spontaneous.
+
+Finally, if $\enthalpy^0 < 0$ and $\dS^0 > 0$ the spontaneity of the
+reaction is independent of temperature. It is spontaneous for all
+temperatures since $\gibbs^0 < 0$ for all temperatures. If
+$\enthalpy^0 > 0$ and $\dS^0 < 0$, $\gibbs^0 > 0$ for all temperatures
+so the reaction is non-spontaneous for all temperatures.
+
+
+\begin{htable}
+  \begin{center}
+    \begin{tabularx}{.67\textwidth}{llX}
+      \toprule
+      Enthalpy & Entropy & Spontaneous or not \\
+      \midrule
+
+      $\enthalpy^0 < 0$ & $\dS^0 > 0$ & allways spontaneous,
+      independently of $T$, since \gibbs is negative and decreasing. \\
+
+      $\enthalpy^0 > 0$ & $\dS^0 < 0$ & never spontaneous since \gibbs
+      is positive and increasing. \\
+
+      $\enthalpy^0 > 0$ & $\dS^0 > 0$ & spontaneous for $T > T^*$ since
+      \gibbs is positive and decreasing. \\
+
+      $\enthalpy^0 < 0$ & $\dS^0 < 0$ & spontaneous for $T < T^*$ since
+      \gibbs is negative and increasing. \\
+
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+  \caption{ The linear dependence of \gibbs of \enthalpy and \dS
+    give us some obvious consequences for \gibbs and spontaneity.  }
+\end{htable}
+
+
+
+These are simple consequences from the linear dependence between
+Gibb's free energy, enthalpy and entropy. If the enthalpy is positive
+at \SI{0}{\kelvin} and the entropy is positive the function of the
+free energy is going to be a straight line with a downward slope. If
+the enthalpy, on the other hand, is negative at \SI{0}{\kelvin} and
+the entropy is negative the function of the free energy is going to be
+a straight line with a upward slope. In both cases there's a straight
+line, crossing the $x$ axis at $T^*$
+
+
+\addsec{Summary}
+
+
+A spontaneous reaction proceeds in the forward direction without the
+need for outside intervention.
+
+We could reason that if the enthalpy of a reaction is negative that
+means that the system around the reaction would reach a more stable
+energy level as the reaction proceeds. Enthalpy is however not enough
+to predict spontaneity of a reaction as we saw spontaneous reactions
+with positive enthalpy as well as non-spontaneous reactions with
+negative enthalpy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

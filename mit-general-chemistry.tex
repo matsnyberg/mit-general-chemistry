@@ -1,0 +1,72 @@
+\documentclass[
+  fontsize=9.5pt,
+  twoside,
+  open=right,
+  mpinclude=true,
+  %parskip=half,
+  numbers=noenddot,
+  %headings=twolinechapter,
+  %chapterprefix=true,
+  DIV=9
+]{scrbook}
+
+\usepackage[english]{babel}
+\usepackage{mats-textbook}
+\usepackage{subfiles}
+\setlength{\marginparwidth}{1.67\marginparwidth}
+\graphicspath{ {mit-general-chemistry/} }
+
+\addbibresource{mit-general-chemistry/mit-general-chemistry.bib}
+
+\begin{document}
+
+% physical constants
+%\pgfmathsetmacro\RH{1.097e+7}% per meter
+%\pgfmathsetmacro\a0{5.291772106712e−11}%
+
+%\pgfmathdeclarefunction{psi100}{1}{%
+%  \pgfmathparse{(2/(\a_0^(3/2))) * e^(-(#1/\a_0)) }%
+%}
+
+\title{MIT General Chemistry}
+\date{20/8 2016}
+\author{Mats Nyberg}
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+\clearpage
+
+\mainmatter
+
+\part{Basic properties of matter}
+\subfile{mit-general-chemistry/atomic-theory}
+\subfile{mit-general-chemistry/periodic-table}
+\subfile{mit-general-chemistry/bonding}
+\subfile{mit-general-chemistry/shape-of-molecules}
+
+\part{Whether reactions will happen and the direction of reactions}
+\subfile{mit-general-chemistry/thermodynamics}
+\subfile{mit-general-chemistry/spontaneouschange}
+\subfile{mit-general-chemistry/thermodynamics-bio}
+
+\part{Chemical reactions}
+\subfile{mit-general-chemistry/chemical-equilibrium}
+
+%\part{Acid-base reaction and redox reactions}
+\subfile{mit-general-chemistry/acid-base-equilibrium}
+\subfile{mit-general-chemistry/redox}
+\chapter{Transition metals}
+\chapter{Kinetics}
+
+
+\backmatter
+
+
+\printbibliography
+\end{document}
+
+
+
+
