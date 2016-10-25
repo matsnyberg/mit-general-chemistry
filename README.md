@@ -6,7 +6,7 @@ Chemical Science_][1] found at MIT Open Courseware
 (https://ocw.mit.edu).
 
 __Disclaimer__. This is a personal work. I am not, in any way, 
-affiliated with the MIT university. I do not have a degree in 
+affiliated with the MIT institute. I do not have a degree in 
 chemistry. The information found in this text should be regarded
 with a critical, if not sceptical, eye. The author do not take any
 responsibility for misconceptions or misunderstandings caused from 
