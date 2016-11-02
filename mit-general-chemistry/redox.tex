@@ -397,7 +397,7 @@ equilibrium.
       \draw[ultra thick] (V.east) -- (abovecathode);
     \end{tikzpicture}
   \end{center}
-  \caption{A galvanic cell.}
+  \caption{A Daniell cell.}
 \end{hfigure}
 
 
@@ -406,7 +406,8 @@ A galvanic cell with copper and zinc electrodes can be described by
 \ceeq{Zn^2+(aq) | Zn(s) || Cu(s) | Cu^2+(aq)}
 
 where single bars is notation for phase change and double bars
-represents the salt bridge.
+represents the salt bridge. This particular design of a galvanic cell
+with copper and zinc half-cells is called a {\em Daniell cell}.
 
 In this cell the zinc electrode is oxidized into zinc ions, loosing
 electrons and the cooper ions are reduced, forming solid cooper on the
@@ -421,6 +422,99 @@ In each beaker occurs a reduction-oxidation half-reaction
 The electrons in the equations travel through the electrical cord as
 apart of the useful work of the cell.
 
+The dynamics and forces of galvanic cells include electron affinity of
+the contained metals as well as diffusion and distribution of the
+salt ions of the salt bridge. Maybe I will expand on this subject in a
+later edition of this text.
+
+
+
+\subsubsection{Faraday's laws of electrolysis}
+
+The amounts of copper deposited from the copper ion solution onto the
+copper electrode as well as the amount of solid zinc consumed into the
+zinc ion solution are proportional to the charge passed through the
+electrical cord. This is stated in {\em Faraday's laws of
+  electrolysis}, expressed in Equation~\ref{faraday}.
+
+\begin{equation}\label{faraday}
+  m = \frac{Q}{F}\frac{M}{z}
+\end{equation}
+for $m$, the mass of substance (copper or zinc) deliberated/consumed
+at the electrodes in grams; $Q$, the total electrical charge in
+coulombs; $F = \SI{96485}{\coulomb\per\mol}$, Faraday's constant; $M$,
+the molar mass of substance in grams per mole; $z$ is the number of
+electrons passed per ion ($z = 2$ for \ce{Zn^2+}, for
+instance). $\frac{M}{z}$ is the weight of the substance altered.
+
+{\em Faraday's first law} says that the larger the value of $Q$ the
+larger $m$ will be if $M, F$ and $z$ are held constant.
+
+{\em Faraday's second law} says that as $\frac{M}{z}$ grows large, so
+will $m$ if $Q, F$ and $z$ are held constant.
+
+
+
+\begin{example}
+  How much zinc and copper will be redistributed as a current of
+  \SI{1.0}{\ampere} flows for \SI{3600}{\second} (one hour)?
+
+  \paragraphbreak
+
+  \begin{enumerate}[label=\arabic*)]
+
+  \item Calculate how much charge has passed during the hour. We use
+    \begin{equation*}
+      Q = I \cdot t
+      = \SI{1.0}{\ampere} \cdot \SI{3600}{\second}
+      = \SI{3600}{\coulomb}
+    \end{equation*}
+    
+    \item Find out how many moles of electrons that is needed to
+      produce that current.
+
+      We use Faraday's constant, $F = \SI{96485}{\coulomb\per\mol}$,
+      to calculate
+      \begin{equation*}
+        n = \frac{Q}{F} = 
+        \frac{\SI{3600}{\coulomb}}{\SI{96485}{\coulomb\per\mol}} =
+        \SI{3.66d-2}{\mol}\quad(\SI{3.73d-2}{\mol})
+      \end{equation*}
+
+    \item Calculate the number of moles of copper and zinc that have
+      been converted in the reactions and convert this number into
+      mass (\si{\gram}).
+
+      When a mole of zinc ions are consumed, two moles of electrons
+      are passed through the electrical cord since the \ce{Zn^2+} ion
+      has a valency of two. The same goes for copper and we calculate
+      the number of moles for each metal as
+      \begin{equation*}
+        n_{\text{metals}} = \frac{n_{\text{electrons}}}{z}
+        = \frac{\SI{3.66d-2}{\mol}}{2}
+        = \SI{1.83d-2}{\mol}
+      \end{equation*}
+
+      Now the atom masses of the metals are
+
+      \begin{inlinetable}{cc}
+        & atomic mass (u) \\
+        \midrule
+        \ce{Zn} & \num{65.38} \\
+        \ce{Cu} & \num{63.546} \\
+      \end{inlinetable}
+
+      This makes
+      \begin{align*}
+        &m_{\ce{Zn}}
+        = \SI{1.83d-2}{\mol} \cdot \SI{65.38}{\atomicmassunit}
+        = \SI{1.19}{\gram} \\
+        &m_{\ce{Cu}}
+        = \SI{1.83d-2}{\mol} \cdot \SI{63.546}{\atomicmassunit}
+        = \SI{1.16}{\gram} \\
+      \end{align*}
+  \end{enumerate}
+\end{example}
 
 
 
