@@ -314,12 +314,11 @@ transfer of electrons between the containers.
 
 
 
-A galvanic cell is one of the simplest types of electrochemical
-cell. It consists of two half-cells in which one hal-reaction of a
-reduction-oxidation reaction occurs. Each half-cell consists of a
-beaker with an electrode of a metal and a solution of ions of that
-metal. The two half-cells are connected by an electrical cord
-between the electrodes as well as a salt bridge,
+One type of electrochemical cell consists of two half-cells in which
+one hal-reaction of a reduction-oxidation reaction occurs. Each
+half-cell consists of a beaker with an electrode of a metal and a
+solution of ions of that metal. The two half-cells are connected by an
+electrical cord between the electrodes as well as a salt bridge,
 
 An oxidation reaction occurs in a beaker when a metal atom on the
 surface of the electrode gives up an electron to the electrode and
@@ -341,8 +340,8 @@ two metals \ce{X}  and \ce{Y}
 \end{align*}
 
 
-A common example of a galvanic cell consists of zinc and copper and a
-salt bridge of potassium chloride.
+A common example of an electrochemical cell consists of zinc and
+copper and a salt bridge of potassium chloride.
 
 An electrode of zinc, the {\em anode}, is immersed in a solution of
 sulfuric acid and zinc ions, a copper cathode immersed in another
@@ -401,7 +400,7 @@ equilibrium.
 \end{hfigure}
 
 
-A galvanic cell with copper and zinc electrodes can be described by
+A cell with copper and zinc electrodes can be described by
 
 \ceeq{Zn^2+(aq) | Zn(s) || Cu(s) | Cu^2+(aq)}
 
@@ -426,6 +425,10 @@ The dynamics and forces of galvanic cells include electron affinity of
 the contained metals as well as diffusion and distribution of the
 salt ions of the salt bridge. Maybe I will expand on this subject in a
 later edition of this text.
+
+
+
+
 
 
 
@@ -516,6 +519,386 @@ will $m$ if $Q, F$ and $z$ are held constant.
   \end{enumerate}
 \end{example}
 
+
+
+
+
+
+
+\subsubsection{Inert electrodes}
+
+
+
+Electrodes are not always consumed or produced during chemical
+experiments. We can , for instance, construct a galvanic cell with one
+platinum electrode where the reaction of the half-cell is going to be
+between \ce{Cr^2+} and \ce{Cr^3+} ions and the platinum electrode will
+be inert, it will not react with either ions, nor the solution.
+
+If the cathode is a copper electrode then the reaction of that
+half-cell is a reduction with the equation
+
+\ceeq{Cu^2+(aq) + 2e^- -> Cu(s)}
+
+In the anode half-cell there is then, we figure, an oxidation. The
+chromium-plus-two ions are oxidized into chromium-plus-three ions
+giving up one electron in the process
+
+\ceeq{Cr^2+(aq) -> Cr^3+(aq) + e^-}
+
+This type of cell can be described with the notation
+
+\begin{equation}
+  \ce{Pt(s) | Cr^2+(aq), Cr^3+(aq) || Cu^2+(aq) | Cu(s)}
+\end{equation}
+
+
+
+
+\subsubsection{Standard hydrogen electrodes}
+
+
+Hydrogen electrodes are commonly constructed with platinum. Standard
+hydrogen electrode (S.H.E.) is a standard against which other
+electrode reduction potentials are measured.
+
+The hydrogen electrode is denoted
+
+\begin{align*}
+  &\ce{H^+(aq) | H2(g) | Pt(s)} &\text{when it acts as a cathode (\ce{H^+} is reduced)}\\
+  &\ce{Pt(s) | H2(g) | H^+(aq)} &\text{when it acts as a anode (\ce{H2} is oxidized)}\\
+\end{align*}
+
+
+
+
+
+
+\subsection{Cell potentials}
+
+{\em Cell potentials} (\cellpotential) is also called {\em cell
+  voltage} as well as {\em electromotive force}. The flow of electrons
+arise from a potential difference, \dE, between the electrodes of the
+circuit.
+
+The overall free energy of the cell is related to the cell potential
+by
+\begin{equation}
+  \gibbscell = -nF\cellpotential
+\end{equation}
+for
+\begin{itemize}
+\item $n$, the number of electrons.
+\item $F = \SI{96485}{\coulomb\per\mol}$, Faraday's constant.
+\item \cellpotential
+\end{itemize}
+
+There is also the corresponding values for electrodes and cells in
+their standard states
+\begin{equation}\label{standard free energy cell}
+  \gibbscellO = -nF\cellpotentialO
+\end{equation}
+The standard emf, when reactants and products are in their standard
+state. The unit of potentials is given in volts (\si{\volt}).
+
+
+
+\begin{example}
+  Calculate \cellpotentialO for
+  \begin{equation*}
+    \ce{Zn(s) | Zn^2+(aq) || Cu^2+(aq) | Cu(s)}
+  \end{equation*}
+
+  \paragraphbreak
+
+  We calculate the overall \cellpotentialO as the difference between
+  the \cellpotentialO of the cathode (as the standard reduction
+  potential) and the \cellpotentialO of the anode (as the standard
+  reduction potential).
+
+  Standard reduction potentials are looked up in tables, measured
+  against S.H.E. The values we find for these particular reactions are
+  \begin{inlinetable}{cc}
+    Half-reaction & \cellpotentialO (\si{\volt})\\
+    \midrule
+    \ce{Zn^2+ + 2e^- -> Zn} & \num{-0.7628} \\
+    \ce{Cu -> Cu^2+ + 2e^-} & \num{0.3402} \\
+  \end{inlinetable}
+
+  and we calculate
+  \begin{equation*}
+    \cellpotentialO = \num{0.3402} - (\num{-0.7628}) = \SI{1.103}{\volt}
+  \end{equation*}
+\end{example}
+
+
+\begin{example}
+  Is the flow of electrons between these two reactions going to be
+  spontaneous? To answer this we calculate the \gibbscellO of the
+  Daniell cell from Equation~\ref{standard free energy cell}.
+
+  \paragraphbreak
+
+  \begin{align*}
+    \gibbscellO &= -nF\cellpotentialO = \\
+    &= - (2 \cdot \SI{96485}{\coulomb\per\mol} \cdot \SI{1.103}{\volt}) = \\
+    &= \SI{-2.128d5}{\kilo\joule\per\mol}
+  \end{align*}
+
+  $\gibbscellO < 0$ and as in the chapter of thermodynamics, this
+  means that the reaction occurs spontaneously.
+
+  As a general rule of thumb, the flow of electrons of a cell will be
+  spontaneous if $\gibbscellO < 0$. Equation~\ref{standard free energy
+    cell} tells us that this is the case if $\cellpotentialO > 0$.
+\end{example}
+
+
+A {\em galvanic cell} is an electrochemical cell in which a
+spontaneous chemical reaction is used to generate an electrical
+current.
+
+In contrast, an {\em electrolytic cell} uses an external electrical
+current to drive a non-spontaneous reaction.
+
+
+
+
+\subsubsection{Meaning of the standard reduction potential}
+
+
+If the standard reduction potential is {\em a large and positive} this
+means the element is easy to reduce.
+
+
+For example, the reaction
+
+\begin{align}
+  &\ce{F2(g) + 2e^- -> 2F^-}&E^0 = \SI{2.87}{\volt}
+\end{align}
+have a great positive standard reduction potential, which makes
+fluorine an element that is easy to reduce (it is easy to add
+electrons). This makes \ce{F2} a good oxidizing agent. A good
+oxidizing agent oxidizes other elements, it gets reduced.
+
+One way to remember this is, for a particular couple, such as
+\ce{F2}/\ce{F^-}, with a large, positive standard reduction potential
+the {\em oxidized species} (\ce{F2}) is very oxidizing -- is a {\em
+  good oxidizing agent}.
+
+
+
+A {\em large negative} standard reduction potential means that the
+element or compound is hard to reduce.
+
+An example of such a reaction is
+\begin{align}
+  &\ce{Li^+(aq) + e^- -> Li(s)}&E^0 = \SI{-3.045}{\volt}
+\end{align}
+
+The large negative standard reduction potential tell us that it is
+hard to add electrons to the lithium ion. Consequently, $E^0\ll 0$
+makes $\gibbsO\gg 0$ which means that the reaction is not favoured --
+it will thus not occur spontaneously. We say that it is hard to add
+electrons to the lithium ion, it is not a good oxidizing agent.
+
+However, \ce{Li(s)} is a good {\em reducing agent} and reduces other
+elements or compounds as it gets oxidized itself.
+
+For such a couple, \ce{Li^+}/\ce{Li}, with a large negative standard
+reduction potential, {\em the reduced species is very reducing}.
+
+
+\begin{example}\label{ex:ferric iodine}
+  What is the standard reduction potential for
+  \ceeqstar{2Fe^3+(aq) + 2I^-(aq) -> 2Fe^2+(aq) + I2(s)}
+  \paragraphbreak
+
+  \begin{enumerate}[label=\arabic*)]
+  \item We start by looking at what is happening at the cathode. That
+    is a reduction. If we look at our equation, we identify the
+    reduction as
+    \ceeqstar{2Fe^3+(aq) + 2e^- -> 2Fe^2+(aq)}
+
+  \item At the anode the oxidation is happening
+    \ceeqstar{2I^- -> I2(s) + 2e^-}
+
+  \item We look up the standard reduction potentials for the two
+    half-reactions and find
+    \begin{inlinetable}{lc}
+      & $E^0$ (\si{\volt}) \\
+      \midrule
+      reduction & \SI{0.77}{\volt} \\
+      oxidation & \SI{0.54}{\volt} \\
+    \end{inlinetable}
+
+  \item Now we can calculate the overall cell potential for this
+    reaction as
+    \begin{equation*}
+      \cellpotentialO
+      = \Delta E^0_{\text{red}} - \Delta E^0_{\text{oxi}}
+      = (0.77) - (0.54) = \SI{0.23}{\volt}
+    \end{equation*}
+
+    Since $\cellpotentialO > 0$ we also conclude that the reaction is
+    spontaneous under the given circumstances.
+  \end{enumerate}
+\end{example}
+
+
+\begin{example}
+  Lets consider the reaction of Example~\ref{ex:ferric iodine} again.
+
+  \begin{equation*}
+    \ce{2Fe^3+(aq) + 2I^-(aq) -> 2Fe^2+(aq) + I2(s)}
+  \end{equation*}
+  
+  It is an oxidation-reduction reaction in which iron(III) is reduced
+  to iron(II) and iodide anion is oxidized into iodine gas.
+
+  \paragraphbreak
+
+  The iron(III) ion is a better oxidation agent than iodine gas and
+  the iodide anion is a better reduction agent than the iron(II) ion.
+
+  This is realized from difference between the reduction potentials of
+  the half-reactions. The oxidized species of the reaction with the
+  bigger positive reduction potential will be the better oxidizing
+  agent. Conversely, the better reducing agent of iron(II) ion and
+  iodine gas, will be the reduced species from the half-reaction with
+  the smallest positive reduction potential.
+\end{example}
+
+
+
+
+\section{Chemical and biological oxidation/reduction reactions}
+
+
+Vitamin \ce{B12} has a large negative reduction potential. How is it
+reduced in the body?
+
+This is important as \ce{B12} need to be reduced to be active.
+
+The proper function of an enzyme that requires \ce{B12} and folic acid
+is thought to be important in preventing heart disease, birth defects
+and the body's mental health maintenance (dementia).
+
+Red meat is a good source of vitamin \ce{B12}. In fact, all meat
+contains \ce{B12}. Plants does not contain any \ce{B12} and
+vegetarians and vegans should make sure they have enough of it.
+
+Folic acid is found in leafy, green vegetables, orange juice and
+Norwegian beer (perhaps Swedish as well).
+
+How is vitamin \ce{B12} reduced in the body? ...
+
+
+
+
+
+
+\section{Adding and subtracting half-reactions}
+
+
+
+Suppose you nee to use a standard reduction potential for
+
+\ceeq{Cu^2+(aq) + e^- -> Cu^+(aq)\label{copper(II) to copper(I)}}
+
+and it is not given to you. Instead you are given the standard
+reduction potential for
+\begin{align}
+  &\ce{Cu^2+(aq) + 2e^- -> Cu(s)\label{copper(II) to copper}}\\
+  &\ce{Cu(s) -> Cu^+(aq) + e^-\label{copper to copper(I)}}
+\end{align}
+
+How would you find the standard reduction potentials for
+the reaction of Equation~\ref{copper(II) to copper(I)}?
+
+The task is of course set up for us to see that if we ``add'' the last
+two equations (\ref{copper(II) to copper} and \ref{copper to
+  copper(I)}) together, the result is the reaction of
+Equation~\ref{copper(II) to copper(I)}.
+
+If you ``add'' together two reduction-oxidation reactions, the new
+standard reduction potential is calculated by using the formula for
+Gibb's free energy
+\begin{equation*}
+  \gibbsO = -nFE^0
+\end{equation*}
+
+and we also remember that
+\begin{equation*}
+  \gibbsO_{\text{new}} = \gibbsO_{\text{reduction}} - \gibbsO_{\text{oxidation}}
+\end{equation*}
+
+We can combine these two formulas into
+\begin{equation}
+  -n_3FE^0_{\text{new}} = -n_1FE^0_{\text{reduction}} + n_2FE^0_{\text{oxidation}}
+\end{equation}
+to obtain
+\begin{equation}\label{eq:E_new}
+  E^0_{\text{new}} = \frac{n_1E^0_{\text{reduction}} - n_2E^0_{\text{oxidation}}}{n_3}
+\end{equation}
+where $n_1$, $n_2$ and $n_3$ are the stoichiometric coefficients
+(number of moles) of electrons in the three reactions.
+
+We can use this formula to calculate the standard reaction potential
+for a half-reaction that is the sum of two other half-reactions.
+
+
+\begin{example}
+  Calculate the standard reduction potential for the reaction of
+  Equation~\ref{copper(II) to copper(I)} given
+
+  \begin{inlinetable}{ll}
+    Half-cell reaction & $E^0$ (\si{\volt}) \\
+    \midrule
+    \ce{Cu^2+(aq) + 2e^- -> Cu(s)} & \num{0.340} \\
+    \ce{Cu(s) + e^- -> Cu^+(aq)} & \num{0.522} \\
+  \end{inlinetable}
+
+  \paragraphbreak
+
+  We plug in the values of $E^0$ for the reactions into
+  Equation~\ref{eq:E_new}
+  \begin{equation*}
+    E^0_{\text{new}} = 2\cdot\SI{0.340}{\volt} - \SI{0.522}{\volt} = \SI{0.158}{\volt}
+  \end{equation*}
+\end{example}
+
+
+
+When we are using Equation~\ref{eq:E_new} to calculate the cell
+potential for a {\em complete cell} (anode and cathode) the number of
+electrons of the reduction will be equal to the number of electrons of
+the oxidation and these will cancel each other out. and we can
+simplify the equation
+\begin{equation}
+  \Delta E^0_{\text{cell}} = E^0_{\text{cathode}} - E^0_{\text{anode}}
+\end{equation}
+
+
+
+
+
+
+\section{Nernst equation}
+
+
+When a battery is exhausted, this is a sign that the
+reduction-oxidation of the cell has reached equilibrium. At this point
+in time, the cell generates zero potential difference across it's
+electrodes. To understand this we need to study how the cell potential
+changes with cell composition.
+
+
+We remind ourselves of what we already know about equilibrium and the
+components of reactions.
+
+We know that \gibbs\ changes as the concentrations of reactants and
+products change. When equilibrium is reached $\gibbs = 0$.
 
 
 \end{document}
