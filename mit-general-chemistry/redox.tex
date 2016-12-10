@@ -276,6 +276,13 @@ Consider
   current (a flow of electrons in a circuit) is either produced by a
   spontaneous chemical reaction or is used to bring about a
   non-spontaneous chemical reaction.
+
+  We talk about a {\em galvanic cell} if the reaction of the cell is
+  spontaneous.
+
+  If the reaction is non-spontaneous and we need to input an electric
+  current to drive the reduction-oxidation reaction, we talk about an
+  {\em electrolytic cell}.
 \end{definition}
 
 \begin{definition}
@@ -772,30 +779,6 @@ reduction potential, {\em the reduced species is very reducing}.
 
 
 
-\section{Chemical and biological oxidation/reduction reactions}
-
-
-Vitamin \ce{B12} has a large negative reduction potential. How is it
-reduced in the body?
-
-This is important as \ce{B12} need to be reduced to be active.
-
-The proper function of an enzyme that requires \ce{B12} and folic acid
-is thought to be important in preventing heart disease, birth defects
-and the body's mental health maintenance (dementia).
-
-Red meat is a good source of vitamin \ce{B12}. In fact, all meat
-contains \ce{B12}. Plants does not contain any \ce{B12} and
-vegetarians and vegans should make sure they have enough of it.
-
-Folic acid is found in leafy, green vegetables, orange juice and
-Norwegian beer (perhaps Swedish as well).
-
-How is vitamin \ce{B12} reduced in the body? ...
-
-
-
-
 
 
 \section{Adding and subtracting half-reactions}
@@ -825,7 +808,7 @@ If you ``add'' together two reduction-oxidation reactions, the new
 standard reduction potential is calculated by using the formula for
 Gibb's free energy
 \begin{equation*}
-  \gibbsO = -nFE^0
+  \gibbsO\ = -nFE^0
 \end{equation*}
 
 and we also remember that
@@ -899,6 +882,204 @@ components of reactions.
 
 We know that \gibbs\ changes as the concentrations of reactants and
 products change. When equilibrium is reached $\gibbs = 0$.
+
+\gibbs\ depends on the equation
+\begin{equation}
+  \gibbs = \gibbsO + RT \ln Q
+\end{equation}
+where $Q$ is the reaction quotient.
+
+The relationship between \gibbsO and $E^0$ is given by
+\begin{equation}
+  \gibbsO = -nF\stdDE
+\end{equation}
+
+By combining the the equations we obtain {\em Nernst equation} through
+some arithmetics
+\begin{equation}\tag{Nernst equation}\label{eq:Nernst equation}
+  \cellpotential
+  =  \cellpotentialO - \frac{RT}{nF}\cdot \ln Q
+\end{equation}
+
+The Nernst equation describes a relationship between the cell
+potential and the reaction quotient, i.e. the cell potential at any
+given time of the reaction.
+
+
+\begin{example}
+  Calculate the cell potential, the potential difference at
+  \SI{25}{\celsius} of a cell in which the concentration of \ce{Zn^2+}
+  is \SI{0.10}{\molar} and the concentration of \ce{Cu^2+} is
+  \SI{0.0010}{\molar}.
+
+  \paragraphbreak
+
+  \begin{enumerate}[label=\arabic*)]
+  \item Calculate \cellpotentialO\ from the standard reduction
+    potentials (\reductionpotentialO) of the half reactions.
+
+    \begin{inlinetable}{lcc}
+      & & \reductionpotentialO (\si{\volt}) \\
+      \ce{Cu^2+(aq) + 2e^- -> Cu(s)} & \ce{Cu^2+/Cu(s)} & \num{0.340} \\
+      \ce{Zn(s) -> 2e^- + Zn^2+(aq)} & \ce{Zn^2+/Zn(s)} & \num{-0.7628} \\
+    \end{inlinetable}
+
+    We plug the values into
+    \begin{equation*}
+      \cellpotentialO =
+      E^0_{\text{cathode}} - E^0_{\text{anode}}
+      = \num{0.340} - (\num{-0.7628})
+      = \SI{1.1028}{\volt}
+    \end{equation*}
+  \item Calculate $Q$. The concentrations of the solids are both
+    \num{1} and the fraction becomes
+    \begin{equation*}
+      Q = \ce{\frac{[Zn^2+]}{[Cu^2+]}}
+      = \frac{\num{1d-1}}{\num{1d-3}}
+      = \num{1d2}
+    \end{equation*}
+    and thus $\ln Q = 4.605$.
+  \item The number of electrons involved in the reduction/oxidation
+    reaction, $n$, is found in the equation of the reaction.
+    \begin{equation*}
+      n = 2
+    \end{equation*}
+  \item Now we can plug these values into the Nernst equation
+    \begin{equation*}
+      \cellpotential
+      = \SI{1.1028}{\volt} - \frac{(\SI{8.315}{\joule\per\kelvin\per\mol})(\SI{298}{\kelvin})}{2\cdot\SI{96485}{\coulomb\per\mol}}\cdot 4.605
+    \end{equation*}
+    This give us
+    \begin{equation*}
+      \cellpotential
+      = \SI{1.1028}{\volt} - \SI{0.0592}{\volt}
+      = \SI{1.044}{\volt}
+    \end{equation*}
+    since $\si{\volt} \equiv \si{\joule\per\coulomb}$.
+  \end{enumerate}
+\end{example}
+
+
+Since we need to calculate $\frac{RT}{F}$ every time we use Nernst
+equation, we are helped by acknowledging that
+\begin{equation*}
+  \frac{RT}{F} = \frac{(\SI{8.315}{\joule\per\kelvin\per\mol})(\SI{298}{\kelvin})}{\SI{96485}{\coulomb\per\mol}}
+  = \SI{0.025693}{\volt}
+\end{equation*}
+at \SI{25}{\celsius}. This simplifies Nernst equation into
+\begin{equation}
+  \cellpotential = \cellpotentialO - \frac{\SI{0.025693}{\volt}}{n} \cdot\ln Q
+\end{equation}
+
+It might be even more simple to use $\log_{10} Q$ in the calculations
+which require us to realize that $\ln Q = \frac{\log_{10} Q}{\log_{10}
+  e}$ which let us calculate
+\begin{equation}
+  \cellpotential = \cellpotentialO - \frac{\SI{0.0592}{\volt}}{n} \cdot\log_{10} Q
+\end{equation}
+
+
+
+At equilibrium $Q = K$ and $\gibbs = 0$ and we get
+\begin{equation*}
+  \gibbs = \gibbsO - RT \ln Q \implies \gibbsO = - RT \ln K
+\end{equation*}
+
+Since earlier we have another dependence for \gibbsO
+\begin{equation}
+  \gibbsO = -nF\stdDE
+\end{equation}
+
+The first equation relates \gibbsO to the equilibrium constant. In the
+latter \gibbsO is related to the standard cell potential. If we
+combine the two equations we get
+\begin{equation}
+  -RT \ln K = nF\stdDE \implies \ln K = \frac{nF\stdDE}{RT}
+\end{equation}
+which let us calculate the equilibrium constant from the standard
+reduction potential.
+
+
+
+
+\section{Chemical and biological oxidation/reduction reactions}
+
+
+Vitamin \ce{B12} (cobalamin) has a large negative reduction potential. How is it
+reduced in the body?
+
+This is important as \ce{B12} need to be reduced to be active.
+
+The proper function of an enzyme that requires \ce{B12} and folic acid
+(\ce{B9}) is thought to be important in preventing heart disease,
+birth defects and the body's mental health maintenance (dementia).
+
+Red meat is a good source of vitamin \ce{B12}. In fact, all meat
+contains \ce{B12}. Plants does not contain any \ce{B12} and
+vegetarians and vegans should make sure they have enough of it.
+
+Folic acid is found in leafy, green vegetables, orange juice and
+Norwegian beer (perhaps Swedish as well).
+
+How is vitamin \ce{B12} reduced in the body? ...
+
+
+Vitamin \ce{B12} is reduced by a protein called flavodoxin. Vitamin
+\ce{B12} has a standard reduction potential of
+\SI{-0.526}{\volt}. Flavodoxin has a standard reduction of
+\SI{-0.230}{\volt}. This makes \ce{B12} a better reducing agent and
+this suggests that Vitamin \ce{B12} should reduce flavodoxin. It is
+however the other way around.
+
+To see whether the reduction of \ce{B12} by flavodoxin is
+spontaneous. We can use the formula
+\begin{equation}
+  \cellpotentialO = E^0_{\text{reduction}} - E^0_{\text{oxidation}}
+\end{equation}
+and then calculate the free energy of the reaction. The
+$E^0_{\text{reduction}} = \SI{-0.526}{\volt}$. It is the standard
+reduction potential for Vitamin \ce{B12}. $E^0_{\text{oxidation}} =
+\SI{-0.230}{\volt}$ is the standard reduction potential for
+flavodoxin. So 
+\begin{equation}
+  \cellpotentialO = (\SI{-0.526}{\volt}) - (\SI{-0.230}{\volt}) = \SI{-0.296}{\volt}
+\end{equation}
+
+Since we find that $\cellpotentialO < 0$ we know that $\gibbsO > 0$ for
+this reaction which tells us that it is non-spontaneous.
+
+We can calculate the free energy, using $\gibbsO = -nF\stdDE$
+\begin{equation}
+  \gibbsO = -(1)\cdot(\SI{96485}{\coulomb\per\mol})\cdot(\SI{-0.296}{\volt})
+  = \SI{28.6}{\kilo\joule\per\mol}
+\end{equation}
+
+We can see from this example that the reduction of Vitamin \ce{B12} by
+flavodoxin puts one additional electron on the vitamin. Also, \gibbsO
+is large --- it takes a lot of energy to drive this reaction.
+
+To facilitate this, there is an enzyme called S-adenosylmethionine
+(SAM, SAM-e) that provides the energy. The \gibbsO for the cleavage of
+SAMe is \SI{-37.6}{\kilo\joule\per\mol}.
+
+\begin{remark}
+  We remind ourselves that a cell in which an unfavourable reaction is
+  driven forward by applying energy is called an electrolytic cell.
+\end{remark}
+
+\ce{B12} has such a low potential, one of the lowest known potential
+in a biological reaction, that this reaction coupled with
+S-adenosylmethionine is the only reaction that can drive the reduction
+of \ce{B12}.
+
+
+
+
+\summary
+
+
+
+
 
 
 \end{document}
